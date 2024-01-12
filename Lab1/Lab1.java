@@ -1,11 +1,20 @@
+/*
+    Name : Omkar Umesh Mundlik
+    Class: AI-B
+    Roll Number : 34
+    Assignment Programs : 
+        1. Create array of 10 integers and find out largest number from given list 
+        2. Enter 10 integers in array and print second minimum number
+        3. Read two matrices of size n*m and print multiplication of two matrices
+        4. Create matrix of size n*n and print sum of all diagonal elements 
+        5. Create one 2d array of size nxm and print lower triangle of matrix
+*/
+
 package Lab1;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- * Lab1
- */
 public class Lab1 {
     public void Program1() {
         Scanner scanner = new Scanner(System.in);
