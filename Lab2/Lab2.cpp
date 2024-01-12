@@ -34,19 +34,57 @@ void printEvenNumbers(vector<int> &arr){
 }
 
 int largestInLowerT(vector<vector<int>> &matrix){
-    
+    int Max = INT_MIN;
+    for(int i=0;i<matrix.size(); i++){
+        for(int j=0;j<=i; j++){
+            Max = max(Max, matrix[i][j]);
+        }
+    }
+    return Max;
+}
+
+int printLeftLower_RightLower(vector<vector<int>> &matrix){
+    cout << "Left lower triangular Matrix : "<<endl;
+    for(int i=0;i<matrix.size(); i++){
+        for(int j=0;j<=i; j++){
+            cout << matrix[i][j]<<" ";
+        }
+        for(int j=i+1; j<matrix.size(); j++){
+            cout <<"0 ";
+        }
+        cout << endl;
+    }
+
+    cout << "Right lower triangular Matrix : "<<endl;  // 3x3
+    for(int i=0;i<matrix.size(); i++){
+        for(int j=0;j<matrix.size()-i-1; j++){
+            cout << "0 ";
+        }
+        for(int j=matrix.size()-i-1; j<matrix.size(); j++){
+            cout << matrix[i][j]<<" ";
+        }
+        cout << endl;
+    }
 }
 
 int main()
 {
-    vector<int> arr = {1,2,3,4,4,4,4,5,4,4,4,7,6,7,8};
-    arr = removeDuplicates(arr);
+    // vector<int> arr = {1,2,3,4,4,4,4,5,4,4,4,7,6,7,8};
+    // arr = removeDuplicates(arr);
     // for(auto i : arr){
     //     cout << i << " " ;
     // }
-    // vector<vector<int>> m = {{1,2,3}, {4,5,6}, {6,7,8}};
-    // cout << upperRightTMatrixSum(m);
-    printEvenNumbers(arr);
+    vector<vector<int>> m = {{1,2,3}, {4,5,6}, {6,7,8}};
+    cout << "Original Matrix : " << endl;
+    for(int i=0;i<m.size(); i++){
+        for(int j=0;j<m.size(); j++){
+            cout << m[i][j] << " ";
+        }
+        cout << endl;
+    }
+    printLeftLower_RightLower(m);
+    // cout << largestInLowerT(m);
+    // printEvenNumbers(arr);
     return 0;
 }
 

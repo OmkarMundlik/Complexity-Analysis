@@ -10,7 +10,7 @@ public class Lab1 {
     public void Program1() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter 10 Elements: ");
-        int size = scanner.nextInt();
+        int size = 10;
         int Arr[] = new int[size];
 
         for (int i = 0; i < size; i++) {
@@ -165,11 +165,12 @@ public class Lab1 {
 
     public static void main(String[] args) {
         Lab1 lab1 = new Lab1();
-        lab1.Program1();
+        System.out.println("Program 5 : ");
+        // lab1.Program1();
         // lab1.Program2();
         // lab1.Program3();
         // lab1.Program4();
-        // lab1.Program5();
+        lab1.Program5();
     }
 
 }
