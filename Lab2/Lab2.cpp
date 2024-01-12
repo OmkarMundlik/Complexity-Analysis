@@ -26,19 +26,27 @@ int upperRightTMatrixSum(vector<vector<int>> &matrix){
 
 void printEvenNumbers(vector<int> &arr){
     for(auto i : arr){
-        
+        if(!(i&1)){
+            cout << i << " " ;
+        }
     }
+    cout << endl;
+}
+
+int largestInLowerT(vector<vector<int>> &matrix){
+    
 }
 
 int main()
 {
-    // vector<int> arr = {1,2,3,4,4,4,4,5,4,4,4,7,6,7,8};
-    // arr = removeDuplicates(arr);
+    vector<int> arr = {1,2,3,4,4,4,4,5,4,4,4,7,6,7,8};
+    arr = removeDuplicates(arr);
     // for(auto i : arr){
     //     cout << i << " " ;
     // }
-    vector<vector<int>> m = {{1,2,3}, {4,5,6}, {6,7,8}};
-    cout << upperRightTMatrixSum(m);
+    // vector<vector<int>> m = {{1,2,3}, {4,5,6}, {6,7,8}};
+    // cout << upperRightTMatrixSum(m);
+    printEvenNumbers(arr);
     return 0;
 }
 
